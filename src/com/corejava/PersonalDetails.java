@@ -7,17 +7,16 @@ public class PersonalDetails {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> names = new ArrayList<>();
-        ArrayList<Integer> birthYears = new ArrayList<>();
+        ArrayList<Integer> birthDates = new ArrayList<>();
 
         while (true) {
             String input = scanner.nextLine();
             if (input.equals("")) {
                 break;
             }
-
             String[] parts = input.split(",");
             names.add(parts[0]);
-            birthYears.add(Integer.valueOf(parts[1]));
+            birthDates.add(Integer.valueOf(parts[1]));
 
         }
         String longest = names.get(0);
@@ -26,15 +25,15 @@ public class PersonalDetails {
                 longest = name;
             }
         }
+        int sum = 0;
+        double average = 0;
+        for (Integer birthDate: birthDates) {
+            sum += birthDate;
+            average = (double) sum / birthDates.size();
+        }
+
         System.out.println("Longest name: " + longest);
-
-        int sumOfBirthYears = 0;
-
-        for (int year: birthYears) {
-            sumOfBirthYears += year;
-        }
-        double average = (double) sumOfBirthYears / birthYears.size();
         System.out.println("Average of the birth years: " + average);
-        }
     }
+}
 
