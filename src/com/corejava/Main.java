@@ -1,5 +1,6 @@
 package com.corejava;
 
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -32,6 +33,14 @@ public class Main {
 //        System.out.println("Sum: " + statistics.sum());
 //        System.out.println("Sum of even numbers: " + evenNum.sum());
 //        System.out.println("Sum of odd numbers: " + oddNum.sum());
+        try (Scanner scanner = new Scanner(Paths.get("file.txt"))) {
+            while (scanner.hasNextLine()) {
+                String row = scanner.nextLine();
+                System.out.println(row);
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
 
 
     }
