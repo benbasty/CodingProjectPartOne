@@ -33,15 +33,41 @@ public class Main {
 //        System.out.println("Sum: " + statistics.sum());
 //        System.out.println("Sum of even numbers: " + evenNum.sum());
 //        System.out.println("Sum of odd numbers: " + oddNum.sum());
-        try (Scanner scanner = new Scanner(Paths.get("file.txt"))) {
-            while (scanner.hasNextLine()) {
-                String row = scanner.nextLine();
-                System.out.println(row);
-            }
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-        }
+//        try (Scanner scanner = new Scanner(Paths.get("file.txt"))) {
+//            while (scanner.hasNextLine()) {
+//                String row = scanner.nextLine();
+//                System.out.println(row);
+//            }
+//        } catch (Exception e) {
+//            System.out.println("Error: " + e.getMessage());
+//        }
+//        Fitbyte assistant = new Fitbyte(30, 60);
+//
+//        double percentage = 0.5;
+//
+//        while (percentage < 1.0) {
+//            double target = assistant.targetHeartRate(percentage);
+//            System.out.println("Target " + (percentage * 100) + "% of maximum: " + target);
+//            percentage = percentage + 0.1;
+//        }
+        HealthStation childrensHospital = new HealthStation();
 
+        Person ethan = new Person("Ethan", 1, 110, 7);
+        Person peter = new Person("Peter", 33, 176, 85);
+
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(peter);
+
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+
+        System.out.println("weighings performed: " + childrensHospital.weighings());
 
     }
 
