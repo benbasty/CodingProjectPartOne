@@ -6,6 +6,7 @@ public class PaymentCard {
     public PaymentCard (double openingBalance) {
         this.balance = openingBalance;
     }
+
     public void eatAffordably() {
         if (this.balance >= 2.60) {
             this.balance = this.balance - 2.6;
