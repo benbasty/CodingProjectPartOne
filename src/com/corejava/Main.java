@@ -168,23 +168,138 @@ public class Main {
 //        System.out.println(a);  // 25.00e
 //        System.out.println(b);  // 5.00e
 //        System.out.println(c);  // 15.00e
-        Money a = new Money(10, 0);
-        Money b = new Money(3, 50);
+//        Money a = new Money(10, 0);
+//        Money b = new Money(3, 50);
+//
+//        Money c = a.minus(b);
+//
+//        System.out.println(a);  // 10.00e
+//        System.out.println(b);  // 3.50e
+//        System.out.println(c);  // 6.50e
+//
+//        c = c.minus(a);       // NB: a new Money object is created, and is placed "at the end of the strand connected to c"
+////  the old 6.5 euros at the end of the strand disappears and the Java garbage collector takes care of it
+//
+//
+//        System.out.println(a);  // 10.00e
+//        System.out.println(b);  // 3.50e
+//        System.out.println(c);  // 0.00e
 
-        Money c = a.minus(b);
+//        Playlist list = new Playlist();
+//        list.addSongs("Enzo and Alexia");
+//        list.addSongs("Fabio");
+//        list.printSong();
+//        Menu menu = new Menu();
+//        menu.addMeal("Tofu ratatouille");
+//        menu.addMeal("Chilli coconut chicken");
+//        menu.addMeal("Chilli coconut chicken");
+//        menu.addMeal("Meatballs with mustard sauce");
+//
+//        menu.printMeals();
+//        menu.clearMenu();
+//
+//        System.out.println();
+//        menu.addMeal("Tomato and mozzarella salad");
+//        menu.printMeals();
+//        Stack s = new Stack();
+//        System.out.println(s.isEmpty());
+//        System.out.println(s.values());
+//        s.add("Value");
+//        System.out.println(s.isEmpty());
+//        System.out.println(s.values());
+//        Stack s = new Stack();
+//        System.out.println(s.isEmpty());
+//        System.out.println(s.values());
+//        s.add("Value");
+//        System.out.println(s.isEmpty());
+//        System.out.println(s.values());
+//        String taken = s.take();
+//        System.out.println(s.isEmpty());
+//        System.out.println(s.values());
+//        System.out.println(taken);
+//        Stack s = new Stack();
+//        s.add("1");
+//        s.add("2");
+//        s.add("3");
+//        s.add("4");
+//        s.add("5");
+//
+//        while (!s.isEmpty()) {
+//            System.out.println(s.take());
+//        }
+//        SimpleCollection s = new SimpleCollection("characters");
+//        System.out.println(s);
+//
+//        System.out.println();
+//
+//        s.add("magneto");
+//        System.out.println(s);
+//
+//        System.out.println();
+//
+//        s.add("mystique");
+//        System.out.println(s);
+//
+//        System.out.println();
+//
+//        s.add("phoenix");
+//        System.out.println(s);
+//        Gift book = new Gift("Harry Potter and the Philosopher's Stone", 2);
+//
+//        System.out.println("Gift's name: " + book.getName());
+//        System.out.println("Gift's weight: " + book.getWeight());
+//
+//        System.out.println("Gift: " + book);
+//        Gift book = new Gift("Harry Potter and the Philosopher's Stone", 2);
+//
+//        Package gifts = new Package();
+//        gifts.addGift(book);
+//        System.out.println(gifts.totalWeight());
+//        SimpleCollection j = new SimpleCollection("characters");
+//        System.out.println("Longest: " + j.longest());
+//
+//        j.add("magneto");
+//        j.add("mystique");
+//        j.add("phoenix");
+//
+//        System.out.println("Longest: " + j.longest());
+//        Rooms room = new Rooms();
+//        room.add(new Persons("Lea", 183));
+//        room.add(new Persons("Kenya", 182));
+//        room.add(new Persons("Auli", 186));
+//        room.add(new Persons("Nina", 172));
+//        room.add(new Persons("Terhi", 185));
+//
+//        System.out.println("");
+//        for (Persons person : room.getPersons()) {
+//            System.out.println(person);
+//        }
+//
+//        System.out.println();
+//        System.out.println("Shortest: " + room.take());
+//        System.out.println("");
+//        for (Persons person : room.getPersons()) {
+//            System.out.println(person);
+//        }
+        Unit book = new Unit("Lord of the rings", 2);
+        Unit phone = new Unit("Nokia 3210", 1);
+        Unit brick = new Unit("brick", 4);
 
-        System.out.println(a);  // 10.00e
-        System.out.println(b);  // 3.50e
-        System.out.println(c);  // 6.50e
+        Suitcase adasCase = new Suitcase(10);
+        adasCase.addItem(book);
+        adasCase.addItem(phone);
 
-        c = c.minus(a);       // NB: a new Money object is created, and is placed "at the end of the strand connected to c"
-//  the old 6.5 euros at the end of the strand disappears and the Java garbage collector takes care of it
+        Suitcase pekkasCase = new Suitcase(10);
+        pekkasCase.addItem(brick);
 
+        Hold hold = new Hold(1000);
+        hold.addSuitcase(adasCase);
+        hold.addSuitcase(pekkasCase);
 
-        System.out.println(a);  // 10.00e
-        System.out.println(b);  // 3.50e
-        System.out.println(c);  // 0.00e
-
+        System.out.println("The suitcases in the hold contain the following items:");
+        hold.printItems();
     }
+
+
 
 }
