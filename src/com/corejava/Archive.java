@@ -1,5 +1,3 @@
-package com.corejava;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 

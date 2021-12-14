@@ -1,7 +1,3 @@
-package com.corejava;
-
-import java.util.Objects;
-
 public class UserItems {
     private String identifier;
     private String name;
