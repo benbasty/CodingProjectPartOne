@@ -353,11 +353,66 @@ public class Main {
 //            }
 //
 //        }
-        JokeManager manager = new JokeManager();
-        Scanner scanner = new Scanner(System.in);
+//        JokeManager manager = new JokeManager();
+//        Scanner scanner = new Scanner(System.in);
+//
+//        UiUserInterface inter = new UiUserInterface(scanner,manager);
+//        inter.start();
+//        Scanner scanner = new Scanner(System.in);
+//        LiquidContainers4 container1 = new LiquidContainers4();
+//        LiquidContainers4 container2 = new LiquidContainers4();
 
-        UiUserInterface inter = new UiUserInterface(scanner,manager);
-        inter.start();
+//        System.out.println(container);
+//        container.add(50);
+//        System.out.println(container);
+//        System.out.println(container.contains());
+//        container.removeAmount(60);
+//        System.out.println(container);
+//        container.add(200);
+//        System.out.println(container);
+//        while (true) {
+//            System.out.println("First: " + container1.toString());
+//            System.out.println("Second: " + container2.toString());
+//            String input = scanner.nextLine();
+//            if (input.equalsIgnoreCase("quit")) {
+//                break;
+//            }
+//            String[] parts = input.split(" ");
+//            String command = parts[0];
+//            int amount = Integer.parseInt(parts[1]);
+//            if (command.equalsIgnoreCase("add")) {
+//                container1.add(amount);
+//            }
+//            if (command.equalsIgnoreCase("move")) {
+//                if (amount > 0) {
+//                    if (amount > container1.contains()) {
+//                        container2.add(container1.contains());
+//                        container1.removeAmount(amount);
+//                    }
+//
+//                } else {
+//                    container1.removeAmount(amount);
+//                    container2.add(amount);
+//                }
+//
+//
+//
+//            }
+//            if (command.equalsIgnoreCase("remove")) {
+//                container2.removeAmount(amount);
+//            }
+//
+//        }
+        TodoList2 list = new TodoList2();
+        list.add("read the course material");
+        list.add("watch the latest fool us");
+        list.add("take it easy");
+
+        list.print();
+        list.removeNumber(2);
+
+        System.out.println();
+        list.print();
     }
 
 
